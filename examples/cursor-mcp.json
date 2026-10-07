@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "phonebox": {
+      "url": "https://phonebox.dev/mcp",
+      "headers": { "Authorization": "Bearer pbx_your_key_here" }
+    }
+  }
+}

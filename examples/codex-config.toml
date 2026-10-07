@@ -1,0 +1,4 @@
+# ~/.codex/config.toml
+[mcp_servers.phonebox]
+url = "https://phonebox.dev/mcp"
+bearer_token_env_var = "PHONEBOX_API_KEY"

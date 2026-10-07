@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "phonebox": {
+      "type": "http",
+      "url": "https://phonebox.dev/mcp",
+      "headers": { "Authorization": "Bearer ${PHONEBOX_API_KEY}" }
+    }
+  }
+}
