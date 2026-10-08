@@ -1,6 +1,6 @@
 # Phonebox Android MCP server
 
-**A hosted Android MCP server for Claude Code, Codex, Cursor and any MCP client.** Your agent gets a real
+**A hosted Android MCP server for Claude Code, Codex, Cursor and any MCP client, from Phonebox, the agent-first cloud phone.** Your agent gets a real
 Android phone in the cloud. It can read the screen, tap, type, install your APK, hand off to a human, and
 park the phone when it's done. You don't need ADB, Android Studio or an emulator.
 
@@ -14,6 +14,10 @@ claude mcp add --transport http phonebox https://phonebox.dev/mcp \
 - **Start free:** $2 of credit, no card → [phonebox.dev](https://phonebox.dev)
 
 > This repo holds the configs and examples. The server itself is hosted by Phonebox, so there's nothing to run.
+
+## Why agent-first
+
+Most cloud phones were built for social-media dashboards or QA test suites and added an API later. Phonebox was built for the agent: your agent signs you up from the terminal, reads the screen as text, gets errors with a `next` step, and never has a write retried behind its back. Idle phones park themselves for free.
 
 ## Why hosted instead of an ADB MCP server?
 
