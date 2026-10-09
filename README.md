@@ -9,6 +9,8 @@ claude mcp add --transport http phonebox https://phonebox.dev/mcp \
   --header "Authorization: Bearer $PHONEBOX_API_KEY"
 ```
 
+▶ **Watch the 56-second demo:** [Give Claude Code an Android Phone (MCP)](https://www.youtube.com/shorts/DObhJkgfJMU) · [transcript](https://phonebox.dev/guides/give-claude-code-an-android-phone)
+
 - **Endpoint:** `https://phonebox.dev/mcp` (Streamable HTTP, bearer API key)
 - **Price:** $0.06 per phone-minute, billed per second, 1-minute minimum. Parked phones are free and keep their apps and sign-ins.
 - **Start free:** $2 of credit, no card → [phonebox.dev](https://phonebox.dev)
