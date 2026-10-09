@@ -9,6 +9,7 @@ claude mcp add --transport http phonebox https://phonebox.dev/mcp \
   --header "Authorization: Bearer $PHONEBOX_API_KEY"
 ```
 
+▶ **Watch the 3-minute setup:** [Give Claude Code an Android Phone: Android MCP Server Setup](https://www.youtube.com/watch?v=-M4ppnKtPcg) · [transcript](https://phonebox.dev/guides/claude-code-android-mcp-server-setup)
 ▶ **Watch the 56-second demo:** [Give Claude Code an Android Phone (MCP)](https://www.youtube.com/shorts/DObhJkgfJMU) · [transcript](https://phonebox.dev/guides/give-claude-code-an-android-phone)
 
 - **Endpoint:** `https://phonebox.dev/mcp` (Streamable HTTP, bearer API key)
