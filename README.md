@@ -58,9 +58,9 @@ Or create a key in the [console](https://phonebox.dev/app) and `export PHONEBOX_
 }
 ```
 
-**Cursor:** add [`examples/cursor-mcp.json`](examples/cursor-mcp.json) to `~/.cursor/mcp.json` or `.cursor/mcp.json`.
+**Cursor:** add [`examples/cursor-mcp.json`](examples/cursor-mcp.json) to `~/.cursor/mcp.json` or `.cursor/mcp.json`. Guide: [give Cursor an Android phone](https://phonebox.dev/guides/give-cursor-an-android-phone).
 
-**Codex:** add [`examples/codex-config.toml`](examples/codex-config.toml) to `~/.codex/config.toml`.
+**Codex:** add [`examples/codex-config.toml`](examples/codex-config.toml) to `~/.codex/config.toml` and `export PHONEBOX_API_KEY=$(phonebox token)`. Guide: [give Codex an Android phone](https://phonebox.dev/guides/give-codex-an-android-phone).
 
 **Any other client:** point it at `https://phonebox.dev/mcp` with an `Authorization: Bearer pbx_…` header. The server is stateless Streamable HTTP and doesn't use OAuth.
 
