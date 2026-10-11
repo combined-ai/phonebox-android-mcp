@@ -1,4 +1,4 @@
-# Phonebox Android MCP server
+# Phonebox: cloud phones for AI agents (Android MCP server)
 
 **A hosted Android MCP server for Claude Code, Codex, Cursor and any MCP client, from Phonebox, the agent-first cloud phone.** Your agent gets a real
 Android phone in the cloud. It can read the screen, tap, type, install your APK, hand off to a human, and
@@ -103,3 +103,7 @@ Android only (no iOS), and there are no phone numbers, SMS or calls. Phonebox gi
 - [Test your Android app with an AI agent](https://phonebox.dev/guides/test-android-app-with-ai)
 - [The best cloud phones for AI agents, compared](https://phonebox.dev/guides/best-cloud-phones-for-ai-agents)
 - [Full MCP documentation](https://phonebox.dev/docs/interfaces/mcp)
+
+---
+
+Phonebox ([phonebox.dev](https://phonebox.dev)) is a cloud phone platform for AI agents. It is not a mobile carrier, phone plan or eSIM provider.
