@@ -62,6 +62,16 @@ Or create a key in the [console](https://phonebox.dev/app) and `export PHONEBOX_
 
 **Codex:** add [`examples/codex-config.toml`](examples/codex-config.toml) to `~/.codex/config.toml` and `export PHONEBOX_API_KEY=$(phonebox token)`. Guide: [give Codex an Android phone](https://phonebox.dev/guides/give-codex-an-android-phone).
 
+**Gemini CLI:**
+
+```bash
+gemini mcp add --transport http --scope user \
+  --header "Authorization: Bearer $PHONEBOX_API_KEY" \
+  phonebox https://phonebox.dev/mcp
+```
+
+**Windsurf, Cline and VS Code (GitHub Copilot):** setup pages for [Windsurf](https://phonebox.dev/guides/give-windsurf-an-android-phone), [Cline](https://phonebox.dev/guides/give-cline-an-android-phone) and [GitHub Copilot](https://phonebox.dev/guides/give-github-copilot-an-android-phone).
+
 **Any other client:** point it at `https://phonebox.dev/mcp` with an `Authorization: Bearer pbx_…` header. The server is stateless Streamable HTTP and doesn't use OAuth.
 
 ## Tools
@@ -91,6 +101,30 @@ screen 1080x2400
 
 - [Test the APK you just built](examples/test-my-apk.md): build, install, explore, and report bugs with the exact screen text.
 - [TypeScript SDK agent](examples/agent.ts): create a phone, read the screen, tap, park.
+- [A phone per customer](examples/phone-per-customer.ts): find or create each customer's phone by your own ID.
+
+## What people use it for
+
+- **Testing the Android app the agent just built.** Build the APK, install it, walk the changed screens, report bugs with the exact screen text. [Guide](https://phonebox.dev/guides/test-android-app-with-ai) · [copy-paste test prompts](https://phonebox.dev/guides/ai-test-prompts-for-android-apps) · [reproduce a bug report with a screen recording](https://phonebox.dev/guides/reproduce-android-bugs-with-ai)
+- **Using apps that have no API.** The agent reads the screen and taps through the app like a person, on its own phone, and hands you a live view link for payments and one-time codes. [Guide](https://phonebox.dev/guides/android-automation-with-ai)
+- **A phone for each customer of an AI product.** One persistent phone per end user, tagged with your customer ID, parked between tasks so idle customers cost nothing. [Guide](https://phonebox.dev/guides/phones-for-your-ai-product) · [example](examples/phone-per-customer.ts)
+
+## FAQ
+
+**How can I give Claude Code an Android phone?**
+Run the `claude mcp add` command at the top with a Phonebox API key. Claude Code gets a cloud Android phone it can read and control, with nothing to install. If you'd rather run everything locally, an emulator plus adb or a local server such as mobile-mcp also works; [every option, compared](https://phonebox.dev/guides/how-to-give-claude-code-an-android-phone).
+
+**Is there a hosted Android MCP server I can use with Claude Code or Cursor?**
+Yes, this one: `https://phonebox.dev/mcp`, Streamable HTTP with a bearer API key. The phones run in Phonebox's cloud, so it works from CI runners and cloud sandboxes where no emulator can run.
+
+**How is it different from mobile-mcp or Appium MCP?**
+Those run on your machine and drive an emulator or USB device you provide, and they also cover iOS. Phonebox brings the phone, keeps it signed in between sessions, and is Android only. [Comparison](https://phonebox.dev/guides/appium-mcp-vs-hosted-android-mcp).
+
+**How can an AI agent use Android apps that have no API?**
+By using the app's screen: the agent reads each screen as a numbered list of elements, taps and types by label, and reads again after every action. Phonebox gives it a phone to do that on, and a live view link when a person must step in.
+
+**What does it cost?**
+$0.06 per phone-minute while a phone runs, billed per second with a 1-minute minimum. Parked phones are free. A 10-minute test pass is $0.60. New accounts get $2 of credit, no card.
 
 ## What it isn't
 
